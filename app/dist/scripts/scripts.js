@@ -1,7 +1,5 @@
 /**
- * @name dnc-pltaforma
- *
- * Main module of the application.
+ * @name rasp-ng
  */
 
 var app = angular.module('ngrasp', ['ngRoute']).
@@ -16,6 +14,12 @@ var app = angular.module('ngrasp', ['ngRoute']).
                 });
     });
 
-app.controller('homeController', function($scope) {
-    $scope.message = 'Hola, Mundo!';
-});
+(function() {
+    'use strict';
+
+    app.controller('homeController', homeController);
+
+    function homeController($scope) {
+        $scope.message = 'Hola, Mundo!';
+    }
+})();
